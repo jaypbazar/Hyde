@@ -1,11 +1,0 @@
-[?1049h[22;0;0t[1;24r(B[m[4l[?7h[?1l>[[93m*[0m] Starting Wifiphisher 1.4GIT ( https://wifiphisher.org ) at 2024-12-20 10:02
-[[32m+[0m] Timezone detected. Setting channel range to 1-13
-[[32m+[0m] Selecting [32mwlp2s0[0m interface for the deauthentication attack
-[[32m+[0m] Selecting [32mwfphshr-wlan0[0m interface for creating the rogue Access Point
-[[32m+[0m] Changing wfphshr-wlan0 MAC addr (BSSID) to 00:00:00:3b:6f:f3
-[[32m+[0m] Changing wfphshr-wlan0 MAC addr (BSSID) to 00:00:00:24:34:83
-[[93m*[0m] Cleared leases, started DHCP, set up iptables
-[[32m+[0m] Selecting OAuth Login Page template
-[[93m*[0m] Starting the fake access point...
-[[93m*[0m] Starting HTTP/HTTPS server at ports 8080, 443
-[24;1H[?1049l[23;0;0t[?1l>
