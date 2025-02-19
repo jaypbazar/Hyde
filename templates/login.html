@@ -5,17 +5,25 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='/css/style-login.css') }}">
 </head>
 <body>
-
 <div class="container">
     <form class="login-form" action="/login" method="post">
-        <img src="https://i.imgur.com/UjhBP8H.png" alt="Hyde Logo" width="100">
+        <img src="{{ url_for('static', filename='img/logo2-hyde.png') }}" alt="Hyde Logo">
 
         <div class="error-message" id="error-message">
-            {{ error }}
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="flash-message {{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
         </div>
 
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="password" id="password" placeholder="Password">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" id="password" placeholder="Password" required>
+        <br><br>
         <div class="button-container">
             <button type="submit">LOGIN</button>
             <p>No account yet? <a href="/register">Create New Account</a></p>
@@ -28,6 +36,6 @@
         By understanding how these attacks work, you can take steps to protect yourself and your devices from cyber threats.</h2>
     </div>
 </div>
-
+<script src="{{ url_for('static', filename='js/flash_fade.js') }}"></script>
 </body>
 </html>

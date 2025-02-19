@@ -1,4 +1,4 @@
-from flask import Flask, session, request, redirect, url_for, render_template
+from flask import Flask, session, request, redirect, url_for, render_template, flash
 from database import db, init_db, add_user, find_user, verify_password
 import subprocess
 import signal
@@ -20,14 +20,16 @@ def register():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
+        password2 = request.form.get("password2")
 
         # Check if the username already exists
         if find_user(username):
-            error = "Username already exists. Please choose a different username."
-            return render_template("register.html", error=error)
-
+            flash("Username already exists. Please choose a different username.", 'error')
+            return redirect(url_for('register'))
+        
         # Add the new user to the database
         add_user(username, password)
+        flash('Registration successful! Please login.', 'success')
         return redirect(url_for("login"))
 
     return render_template("register.html")
@@ -46,8 +48,8 @@ def login():
             session["user"] = username
             return redirect(url_for("index"))
         else:
-            error = "Invalid username or password. Please try again."
-            return render_template("login.html", error=error)
+            flash("Invalid username or password. Please try again.", 'error')
+            return redirect(url_for('login'))
 
     return render_template("login.html")
 
