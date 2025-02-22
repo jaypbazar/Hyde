@@ -6,6 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Remove the message after 5 seconds
         setTimeout(function() {
             message.style.display = 'none';
-        }, 5000);
+        }, 3000);
     });
 });

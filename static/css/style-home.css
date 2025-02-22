@@ -97,10 +97,16 @@ display: flex;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 30vh; /* Adjust logo size as needed */
+    height: 30vh; /* Adjust logo size as needed */
     margin-top: 10%;
     aspect-ratio: 1;
     border-radius: 5%; /* Makes the logo circular */
+}
+
+.home-button {
+    text-decoration: none; 
+    color: #ffffff;
+    width: fit-content;
 }
 
 .scan-button {

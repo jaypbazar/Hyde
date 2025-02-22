@@ -3,10 +3,21 @@
 <head>
 <title>Hyde Login</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='/css/style-login.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/style-flash-message.css') }}">
 </head>
 <body>
 
 <div class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="flash-message {{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
     <div class="info">
         <h2>HYDE is an educational tool designed to simulate an evil twin attack. It demonstrates how hackers can easily create fake Wi-Fi networks to intercept and potentially steal sensitive information.</b>
         This device is intended solely for educational purposes. It should never be used to harm or damage any person, device, or network.
@@ -15,17 +26,6 @@
 
     <form class="login-form" action="/register" method="post">
         <h1 class="greeting">Welcome to Hyde</h1>
-        <div class="error-message" id="error-message">
-            {% with messages = get_flashed_messages(with_categories=true) %}
-                {% if messages %}
-                    {% for category, message in messages %}
-                        <div class="flash-message {{ category }}">
-                            {{ message }}
-                        </div>
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}
-        </div>
 
         <input type="text" name="username" placeholder="Enter username" required>
         <input type="password" name="password" id="password" placeholder="Enter password" required>

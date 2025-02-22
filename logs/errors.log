@@ -1,0 +1,19 @@
+2025-02-22 22:30:49 - User: Anonymous - WARNING - Failed login attempt for username: Ritem
+2025-02-22 22:32:11 - User: Admin - ERROR - Error executing command: 'wifiphisher' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "d:\OneDrive - Camarines Sur Polytechnic Colleges\College Files\3rd Year College\2nd Semester\Software Engineering 2\Project for Testing\Hyde\app.py", line 206, in index
+    raise Exception(stderr)
+Exception: 'wifiphisher' is not recognized as an internal or external command,
+operable program or batch file.
+
+2025-02-22 22:32:14 - User: Admin - ERROR - Error executing command: 'airmon-ng' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "d:\OneDrive - Camarines Sur Polytechnic Colleges\College Files\3rd Year College\2nd Semester\Software Engineering 2\Project for Testing\Hyde\app.py", line 206, in index
+    raise Exception(stderr)
+Exception: 'airmon-ng' is not recognized as an internal or external command,
+operable program or batch file.
+
+2025-02-22 22:54:20 - User: Anonymous - WARNING - Registration failed - username already exists: Ritem2
+2025-02-22 23:01:29 - User: Anonymous - WARNING - Failed login attempt for username: asdaasdasdasdasd

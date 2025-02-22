@@ -3,23 +3,22 @@
 <head>
 <title>Hyde Login</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='/css/style-login.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/style-flash-message.css') }}">
 </head>
 <body>
 <div class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="flash-message {{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
     <form class="login-form" action="/login" method="post">
         <img src="{{ url_for('static', filename='img/logo2-hyde.png') }}" alt="Hyde Logo">
-
-        <div class="error-message" id="error-message">
-            {% with messages = get_flashed_messages(with_categories=true) %}
-                {% if messages %}
-                    {% for category, message in messages %}
-                        <div class="flash-message {{ category }}">
-                            {{ message }}
-                        </div>
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}
-        </div>
 
         <input type="text" name="username" placeholder="Username" required>
         <input type="password" name="password" id="password" placeholder="Password" required>
