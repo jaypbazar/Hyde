@@ -3,9 +3,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const password2 = document.getElementById('password2');
     const form = document.querySelector('.login-form');
 
+    // Guard clause - check if we're on the registration page
+    if (!password || !password2 || !form) {
+        console.log('Not on registration page or elements not found');
+        return;
+    }
+
     // Create password requirements container
     const requirementsDiv = document.createElement('div');
     requirementsDiv.className = 'password-requirements';
+    requirementsDiv.style.display = 'none'; // Hidden by default
     requirementsDiv.innerHTML = `
         <div class="requirement" id="length">At least 8 characters long</div>
         <div class="requirement" id="uppercase">Contains uppercase letter</div>
@@ -13,7 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="requirement" id="number">Contains number</div>
         <div class="requirement" id="special">Contains special character</div>
     `;
-    password.parentNode.insertBefore(requirementsDiv, password.nextSibling);
+
+    // Insert requirements after password field
+    password.insertAdjacentElement('afterend', requirementsDiv);
 
     // Show requirements when password field is focused
     password.addEventListener('focus', function() {
@@ -46,10 +55,12 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update requirement visual indicators
         for (const [req, met] of Object.entries(requirements)) {
             const element = document.getElementById(req);
-            if (met) {
-                element.classList.add('met');
-            } else {
-                element.classList.remove('met');
+            if (element) {
+                if (met) {
+                    element.classList.add('met');
+                } else {
+                    element.classList.remove('met');
+                }
             }
         }
 

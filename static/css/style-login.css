@@ -140,3 +140,16 @@ a {
 .input-error {
     border-color: #ff0000 !important;
 }
+
+.eye-icon {
+    position: relative;
+    width: 25px;
+    height: 20px;
+    margin-top: -3.4em;
+    margin-right: 0.5em;
+    padding-bottom: 15px;
+}
+
+.eye-icon:hover {
+    cursor: pointer;
+}

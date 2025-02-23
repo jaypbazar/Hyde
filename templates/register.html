@@ -28,8 +28,18 @@
         <h1 class="greeting">Welcome to Hyde</h1>
 
         <input type="text" name="username" placeholder="Enter username" required>
-        <input type="password" name="password" id="password" placeholder="Enter password" required>
-        <input type="password" name="password2" id="password2" placeholder="Re-enter password" required>
+        
+        <input type="password" name="password" placeholder="Enter password" required>
+        <a><img src="{{ url_for('static', filename='img/icon-eye_close.png') }}" 
+                data-eye-open="{{ url_for('static', filename='img/icon-eye_open.png') }}"
+                data-eye-closed="{{ url_for('static', filename='img/icon-eye_close.png') }}"
+                class='eye-icon'></a>
+
+        <input type="password" name="password2" placeholder="Re-enter password" required>
+        <a><img src="{{ url_for('static', filename='img/icon-eye_close.png') }}" 
+                data-eye-open="{{ url_for('static', filename='img/icon-eye_open.png') }}"
+                data-eye-closed="{{ url_for('static', filename='img/icon-eye_close.png') }}"
+                class='eye-icon'></a>
         <br><br>
         <div class="button-container">
             <button type="submit">SIGNUP</button>
@@ -37,6 +47,7 @@
         </div>
     </form>
 </div>
+<script src="{{ url_for('static', filename='js/toggle_password.js') }}"></script>
 <script src="{{ url_for('static', filename='js/validate_password.js') }}"></script>
 <script src="{{ url_for('static', filename='js/flash_fade.js') }}"></script>
 </body>
