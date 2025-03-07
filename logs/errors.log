@@ -50,3 +50,36 @@ Traceback (most recent call last):
 Exception: 'wifiphisher' is not recognized as an internal or external command,
 operable program or batch file.
 
+2025-03-07 14:54:39 - User: Anonymous - WARNING - Registration failed - username already exists: Ritem
+2025-03-07 14:55:20 - User: Ritem - ERROR - Error executing command: 'wifiphisher' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "d:\OneDrive - Camarines Sur Polytechnic Colleges\College Files\3rd Year College\2nd Semester\Software Engineering 2\Project for Testing\Hyde\app.py", line 206, in index
+    raise Exception(stderr)
+Exception: 'wifiphisher' is not recognized as an internal or external command,
+operable program or batch file.
+
+2025-03-07 14:55:21 - User: Ritem - ERROR - Error executing command: 'airmon-ng' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "d:\OneDrive - Camarines Sur Polytechnic Colleges\College Files\3rd Year College\2nd Semester\Software Engineering 2\Project for Testing\Hyde\app.py", line 206, in index
+    raise Exception(stderr)
+Exception: 'airmon-ng' is not recognized as an internal or external command,
+operable program or batch file.
+
+2025-03-07 14:55:40 - User: Ritem - ERROR - Error executing command: 'wifiphisher' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "d:\OneDrive - Camarines Sur Polytechnic Colleges\College Files\3rd Year College\2nd Semester\Software Engineering 2\Project for Testing\Hyde\app.py", line 206, in index
+    raise Exception(stderr)
+Exception: 'wifiphisher' is not recognized as an internal or external command,
+operable program or batch file.
+
+2025-03-07 14:55:45 - User: Ritem - ERROR - Error executing command: 'wifiphisher' is not recognized as an internal or external command,
+operable program or batch file.
+Traceback (most recent call last):
+  File "d:\OneDrive - Camarines Sur Polytechnic Colleges\College Files\3rd Year College\2nd Semester\Software Engineering 2\Project for Testing\Hyde\app.py", line 206, in index
+    raise Exception(stderr)
+Exception: 'wifiphisher' is not recognized as an internal or external command,
+operable program or batch file.
+

