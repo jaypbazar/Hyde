@@ -5,6 +5,7 @@ import signal
 import logging
 from datetime import datetime
 import os
+import string
 
 # Create logs directory if it doesn't exist
 if not os.path.exists('logs'):
@@ -74,6 +75,30 @@ def register():
             f"Registration attempt for username: {username}",
             extra=LogContext.get_context()
         )
+
+        # Check if passwords match
+        if password != password2:
+            error_logger.warning(
+                f"Registration failed - passwords do not match for username: {username}",
+                extra=LogContext.get_context()
+            )
+            flash("Passwords do not match. Please try again.", 'error')
+            return redirect(url_for('register'))
+
+        # Check for password strength
+        if (
+            len(password) < 8 or
+            not any(char.islower() for char in password) or
+            not any(char.isupper() for char in password) or
+            not any(char.isdigit() for char in password) or
+            not any(char in string.punctuation for char in password)
+        ):
+            error_logger.warning(
+            f"Registration failed - weak password for username: {username}",
+            extra=LogContext.get_context()
+            )
+            flash("Weak password. Please provide a stronger password.", 'error')
+            return redirect(url_for('register'))
 
         # Check if the username already exists
         if find_user(username):
